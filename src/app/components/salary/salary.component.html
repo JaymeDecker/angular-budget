@@ -1,0 +1,11 @@
+<div class="form-group row text-muted">
+  <label for="salary" class="col-sm-4 col-form-label">SALARY <small>( *Less tax )</small></label>
+  <div class="col-4">
+    <input type="number" class="form-control" id="salary" placeholder="0" [(ngModel)]="Calculation.Salary" (ngModelChange)="salaryChanged($event)">
+  </div>
+</div>
+
+<div class="form-group row text-muted">
+  <label class="col-sm-4 col-form-label">TOTAL MONTHLY INCOME</label>
+  <label class="col col-form-label ml-2">{{ Calculation.TotalIncome | currency: Currency }}</label>
+</div>

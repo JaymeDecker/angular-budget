@@ -1,0 +1,33 @@
+/* You can add global styles to this file, and also import other style files */
+
+body {
+    background-color: #EEE;
+}
+.card-header {
+    background-color: #394aa7;
+    color: rgba(255,255,255, 1);
+}
+input {
+    border-width:0px!important;
+    border:none!important;
+    box-shadow: none!important;
+    border-radius: 0px!important;
+    border-bottom: 1px solid #3f51b56c!important;
+    margin-right: 5px;
+}
+.spacer {
+    margin-right: 5px;
+}
+.btn {
+    border-radius: 0px!important;
+    box-shadow: none!important;
+}
+
+hr.hr-blue {
+    border-color: #3f51b56c;
+}
+
+/* Looks like both bootstrap and ngx-toastr use the .toastr class, affecting the opacity property on the toastr div. */
+.toast {
+    opacity: 1 !important;
+}

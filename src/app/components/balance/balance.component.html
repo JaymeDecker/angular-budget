@@ -1,0 +1,33 @@
+<div class="card mt-3 text-muted shadow-sm">
+
+  <div class="card-header">
+    <h5 class="card-title m-0">Income Less Expenses</h5>
+  </div>
+
+  <div class="card-body">
+
+    <div class="form-group row">
+      <label class="col-sm-4 col-form-label">TOTAL MONTHLY INCOME</label>
+      <label class="col col-form-label ml-2">{{ Calculation.TotalIncome | currency: Currency }}</label>
+    </div>
+
+    <div class="form-group row">
+      <label class="col-sm-4 col-form-label">TOTAL MONTHLY EXPENSES</label>
+      <label class="col col-form-label ml-2">{{ Calculation.TotalExpenses | currency: Currency }}</label>
+    </div>
+
+    <hr class="hr-blue" />
+
+    <h5 class="text-muted text-uppercase text-center">
+      Balance: 
+      <span [ngClass]="{'text-success': (Calculation.TotalIncome - Calculation.TotalExpenses) >= 0, 'text-danger': (Calculation.TotalIncome - Calculation.TotalExpenses) < 0}">
+        {{ (Calculation.TotalIncome - Calculation.TotalExpenses) | currency: Currency }}
+      </span>
+    </h5>
+
+    <hr class="hr-blue" />
+
+    <app-controls></app-controls>
+
+  </div>
+</div>

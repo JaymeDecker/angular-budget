@@ -1,0 +1,11 @@
+<div class="card mb-3 shadow-sm">
+  <div class="card-header card-sub-header">
+    <div class="card-title">
+      <ng-content select="[title]"></ng-content>
+      <button class="btn btn-outline-light float-right text-white" (click)="onAdditem()">Add</button>
+    </div>
+  </div>
+  <div class="card-body">
+    <app-line-item [IsIncome]="IsIncome"></app-line-item>
+  </div>
+</div>

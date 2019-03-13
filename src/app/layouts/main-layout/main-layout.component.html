@@ -1,0 +1,25 @@
+<div class="container my-5">
+
+  <div class="card shadow-sm">
+
+    <div class="card-header">
+      <h5 class="card-title m-0">Monthly Budget</h5>
+    </div>
+
+    <div class="card-body">
+      <app-salary></app-salary>
+      <app-section [IsIncome]="true">
+        <h5 title class="float-left">Income <small>( * Less Tax )</small></h5>
+      </app-section>
+      <app-section [IsIncome]="false">
+        <h5 title class="float-left">Expenses</h5>
+      </app-section>
+    </div>
+
+  </div>
+
+  <app-balance></app-balance>
+
+</div>
+
+<app-footer></app-footer>

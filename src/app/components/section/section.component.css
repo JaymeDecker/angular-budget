@@ -1,0 +1,12 @@
+.card-sub-header {
+    background-color: #3f51b5!important;
+    color: rgba(255, 255, 255, 0.829)!important;
+}
+.card-sub-header > .card-title {
+    line-height: 15px;
+    font-size: 15px;
+}
+
+.btn:hover {
+    color: #3f51b5!important;
+}

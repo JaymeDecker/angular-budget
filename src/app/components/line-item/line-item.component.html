@@ -1,0 +1,16 @@
+<div *ngIf="LineItems && LineItems.length > 0">
+  <div class="form-group row m-0 p-0" *ngFor="let L of LineItems; index as i">
+
+    <input type="text" class="col-md-3 spacer form-control" [ngClass]="{'error': (!L.Name || L.Name.length <= 0)}" placeholder="Name" [(ngModel)]="L.Name">
+
+    <div class="col-md-2 spacer p-0">
+      <input type="number" class="form-control" [ngClass]="{'error': L.Amount <= 0}" placeholder="0" [(ngModel)]="L.Amount">
+      <p class="text-muted help-block"><small>{{ getPercentage(L.Amount) }}</small></p>
+    </div>
+
+    <input type="text" class="col spacer form-control" placeholder="Description" [(ngModel)]="L.Description">
+
+    <button class="btn btn-outline-danger" (click)="onDelete(i)"><span aria-hidden="true">&times;</span></button>
+
+  </div>
+</div>
